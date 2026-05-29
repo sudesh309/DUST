@@ -1,0 +1,7 @@
+- The aircraft shall maintain a cruise altitude of 35000 ft.
+- When the landing gear is commanded down, the landing gear system shall extend within 10 s.
+- While in cruise mode, the fuel system shall maintain fuel pressure at 30 bar.
+- If engine fire is detected, then the fire protection system shall discharge the extinguisher within 2 s.
+- The avionics data bus shall provide an interface to the flight management system at 100 Mbps.
+- Where de-icing is installed, the wing anti-ice system shall heat the leading edge to 40 degC.
+- The airframe shall withstand a maximum load factor of 2.5 g.
