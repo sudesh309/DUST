@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dust"
+version = "0.1.0"
+description = "NLP + GenAI engine that formalizes engineering requirements into JSON IR, EARS, SysML v2, and an ontology."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "pydantic>=2.6",
+    "pydantic-settings>=2.2",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.39"]
+openai = ["openai>=1.30"]
+nlp = ["spacy>=3.7"]
+rdf = ["rdflib>=7.0"]
+dev = ["pytest>=8.0"]
+all = ["anthropic>=0.39", "openai>=1.30", "spacy>=3.7", "rdflib>=7.0", "pytest>=8.0"]
+
+[project.scripts]
+dust-api = "dust.api.app:main"
+
+[tool.setuptools.packages.find]
+include = ["dust*"]
+
+[tool.setuptools.package-data]
+dust = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
